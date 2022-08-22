@@ -1,0 +1,202 @@
+1.
+PS C:\Users\Legion> label
+Volume in drive C: is Windows-SSD
+Volume Serial Number is B06A-E897
+Volume label (32 characters, ENTER for none)?
+
+2.
+PS C:\Users\Legion> comp
+Name of first file to compare: KULIAH
+Name of second file to compare: C++
+
+3.
+PS C:\Users\Legion> bcdboot
+
+Bcdboot - Bcd boot file creation and repair tool.
+
+The bcdboot.exe command-line tool is used to copy critical boot files to the
+system partition and to create a new system BCD store.
+
+bcdboot <source> [/l <locale>] [/s <volume-letter> [/f <firmware>]] [/v]
+                 [/vbcd] [/m [{OS Loader ID}]] [/addlast] [/p] [/c]
+
+  source     Specifies the location of the windows system root.
+
+4.
+PS C:\Users\Legion> ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::840e:472b:64f3:92af%6
+   IPv4 Address. . . . . . . . . . . : 192.168.43.153
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.43.1
+
+5.
+PS C:\Users\Legion> ping
+
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+            [-4] [-6] target_name
+
+6.
+PS C:\Users\Legion> copy
+
+cmdlet Copy-Item at command pipeline position 1
+Supply values for the following parameters:
+Path[0]: 12
+
+7.
+PS C:\Users\Legion> date
+
+Tuesday, August 16, 2022 2:55:41 PM
+
+8.
+PS C:\Users\Legion> hostname
+LAPTOP-8VIR6AAS
+
+9.
+PS C:\Users\Legion> choice
+[Y,N]?Y
+
+10.
+PS C:\Windows\system32> help
+
+TOPIC
+    Windows PowerShell Help System
+
+SHORT DESCRIPTION
+    Displays help about Windows PowerShell cmdlets and concepts.
+
+LONG DESCRIPTION
+    Windows PowerShell Help describes Windows PowerShell cmdlets,
+    functions, scripts, and modules, and explains concepts, including
+    the elements of the Windows PowerShell language.
+
+    Windows PowerShell does not include help files, but you can read the
+    help topics online, or use the Update-Help cmdlet to download help files
+    to your computer and then use the Get-Help cmdlet to display the help
+    topics at the command line.
+
+    You can also use the Update-Help cmdlet to download updated help files
+    as they are released so that your local help content is never obsolete.
+
+    Without help files, Get-Help displays auto-generated help for cmdlets,
+    functions, and scripts.
+
+
+  ONLINE HELP
+    You can find help for Windows PowerShell online in the TechNet Library
+    beginning at http://go.microsoft.com/fwlink/?LinkID=108518.
+
+    To open online help for any cmdlet or function, type:
+
+        Get-Help <cmdlet-name> -Online
+
+  UPDATE-HELP
+    To download and install help files on your computer:
+
+       1. Start Windows PowerShell with the "Run as administrator" option.
+       2. Type:
+
+          Update-Help
+
+    After the help files are installed, you can use the Get-Help cmdlet to
+    display the help topics. You can also use the Update-Help cmdlet to
+    download updated help files so that your local help files are always
+    up-to-date.
+
+    For more information about the Update-Help cmdlet, type:
+
+       Get-Help Update-Help -Online
+
+-- More  --
+
+11.
+PS C:\Windows\system32> pause
+Press Enter to continue...:
+
+12.
+PS C:\Windows\system32> print
+No file to print
+
+13.
+PS C:\Windows\system32> klist
+
+Current LogonId is 0:0x91888
+
+Cached Tickets: (0)
+
+14.
+PS C:\Windows\system32> logman
+
+Data Collector Set                      Type                          Status
+-------------------------------------------------------------------------------
+
+The command completed successfully.
+
+15.
+PS C:\Windows\system32> makecab
+Cabinet Maker - Lossless Data Compression Tool
+
+MAKECAB [/V[n]] [/D var=value ...] [/L dir] source [destination]
+MAKECAB [/V[n]] [/D var=value ...] /F directive_file [...]
+
+  source         File to compress.
+  destination    File name to give compressed file.  If omitted, the
+                 last character of the source file name is replaced
+                 with an underscore (_) and used as the destination.
+  /F directives  A file with MakeCAB directives (may be repeated). Refer to
+                 Microsoft Cabinet SDK for information on directive_file.
+  /D var=value   Defines variable with specified value.
+  /L dir         Location to place destination (default is current directory).
+  /V[n]          Verbosity level (1..3).
+
+16.
+PS C:\Windows\system32> net print
+The syntax of this command is:
+
+NET
+    [ ACCOUNTS | COMPUTER | CONFIG | CONTINUE | FILE | GROUP | HELP |
+      HELPMSG | LOCALGROUP | PAUSE | SESSION | SHARE | START |
+      STATISTICS | STOP | TIME | USE | USER | VIEW ]
+
+17.
+PS C:\Windows\system32> pathping
+
+Usage: pathping [-g host-list] [-h maximum_hops] [-i address] [-n]
+                [-p period] [-q num_queries] [-w timeout]
+                [-4] [-6] target_name
+
+18.
+PS C:\Windows\system32> clip
+
+INFO: Type "CLIP /?" for usage.
+
+19.
+PS C:\Windows\system32> chcp
+Active code page: 437
+
+20.
+PS C:\Windows\system32> recover
+RECOVER [drive:][path]filename

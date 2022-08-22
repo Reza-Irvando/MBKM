@@ -1,0 +1,12 @@
+Hasil cari-java.bat
+
+Ada file Java pada direktori C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\runtime\win64;E:\bin;E:\polyspace\bin;C:\Program Files\dotnet\;C:\Program Files\gtkwave\bin;C:\Program Files\GHDL\0.37-mingw32-mcode\bin;C:\Program Files\Git\cmd;C:\Users\Reza Irvando\AppData\Local\Microsoft\WindowsApps;;C:\Users\Reza Irvando\AppData\Local\Programs\Microsoft VS Code\bin
+
+
+Hasil file-ren.bat
+
+Ada file java di direktori \Kemampuan-dasar\filejava
+javaa12.java ada, diganti namanya (y/t)?
+Masukkan respon: : y
+Masukkan nama file baru: : jaavvaa.java
+Press any key to continue . . .
