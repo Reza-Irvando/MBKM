@@ -8,7 +8,7 @@ request = {
 def tes(request):
     try:
         schema = {
-            "userName" : int,
+            "userName" : str,
             "userPassword" : str
         }
         checker = Checker(schema)
