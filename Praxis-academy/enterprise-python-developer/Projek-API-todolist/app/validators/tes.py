@@ -13,7 +13,7 @@ def tes(request):
         }
         checker = Checker(schema)
         checker.validate(request)
-        return False
+        return True
     except Exception as err:
         return err
         # print(err)
