@@ -3,7 +3,7 @@ from typing_extensions import Required
 from mongoengine import connect
 from mongoengine import *
 from datetime import datetime
-fom app import config
+from app import config
 
 connect(alias = 'db_user_management', db = 'db_user_management')
 
