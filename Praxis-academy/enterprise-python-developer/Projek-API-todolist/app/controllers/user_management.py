@@ -1,4 +1,3 @@
-from email.message import Message
 from flask import request
 from app import validators
 from http import HTTPStatus
@@ -18,12 +17,13 @@ def Register():
     collUser = models.Users(
         userName = bodyJson["userName"],
         userPassword = bodyJson["userPassword"],
-        userEmail = bodyJson("userEmail"),
-        roleId = bodyJson["roleId"]
+        userEmail = bodyJson["userEmail"],
+        # roleId = bodyJson["roleId"]
     )
+    collUser.save()
     return response.Make(
             Status = HTTPStatus.OK.value,
-            Message = "error",
+            Message = "success",
             Data = f"user {bodyJson['userName']} has created"
     ), HTTPStatus.OK.value
 
@@ -52,19 +52,19 @@ def ListUser():
     data = []
     for i in collUser:
         data.append({
-            "id" : i.collUser.id,
-            "userName" : i.collUser.userName,
-            "userEmail" : i.collUser.userEmail,
-            "userRole" : i.collUser.roleId.roleName
+            "id" : str (i.id),
+            "userName" : i.userName,
+            "userEmail" : i.userEmail,
+            # "userRole" : i.roleId
         })
     print(collUser)
     return response.Make(
         Status = HTTPStatus.OK.value,
         Message = "success",
-        Data = ""
+        Data = data
     ), HTTPStatus.OK.value
 
-def UpdateUser():
+def UpdateUser(userId):
     bodyJson = request.json
     err = validators.UpdateUser(bodyJson)
     if err:
