@@ -80,7 +80,7 @@ def UpdateUser(userId):
 
 def DeleteUser():
     userId = request.args["userId"]
-    models.Users.objeccts(id = userId).delete()
+    models.Users.objects(id = userId).delete()
     return response.Make(
         Status = HTTPStatus.BAD_REQUEST.value,
         Message = "error",
