@@ -3,6 +3,7 @@ from app import validators
 from http import HTTPStatus
 from app import response
 from app import models
+from bson import ObjectId
 
 def AddList():
     bodyJson = request.json
@@ -40,7 +41,9 @@ def ViewList():
         Data=data
     ), HTTPStatus.OK.value
 
-def UpdateList(listId):
+def UpdateList():
+    listId = request.args["id"]
+    print(listId)
     bodyJson = request.json
     err = validators.UpdateList(bodyJson)
     if err:
@@ -49,22 +52,29 @@ def UpdateList(listId):
             Message = "error",
             Data = str(err)
         ), HTTPStatus.BAD_REQUEST.value
-    
-    collList = models.List.objects(id = listId).update(ToDoList=bodyJson["ToDoList"], Deskripsi=bodyJson["Deskripsi"])
+  
+    collList = models.List.objects(id = ObjectId(listId)).update(ToDoList=bodyJson["ToDoList"], Deskripsi=bodyJson["Deskripsi"])
     print(collList)
     return(bodyJson)
 
 def DeleteList():
-    listId = request.args["listId"]
-    models.List.objects(id = listId).delete()
+    listId = request.args["id"]
+    collList = models.List.objects(id = ObjectId(listId)).delete()
+    if not collList:
+        return response.Make(
+            Status=HTTPStatus.OK.value,
+            Message="error",
+            Data="Tidak Ditemukan."
+        ), HTTPStatus.BAD_REQUEST.value
     return response.Make(
         Status = HTTPStatus.BAD_REQUEST.value,
-        Message = "error",
+        Message = "success",
         Data = f"successfuly deleted list : {listId}"
     ), HTTPStatus.OK.value
 
-def DetailList(listId):
-    collList = models.List.objects(id = listId).first()
+def DetailList():
+    listId = request.args["id"]
+    collList = models.List.objects(id = ObjectId(listId)).first()
     if not collList:
         return response.Make(
             Status=HTTPStatus.OK.value,

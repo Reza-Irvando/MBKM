@@ -4,10 +4,6 @@ from app import config
 
 connect(alias = 'db_user_management', db = 'db_user_management')
 
-class Roles(Document):
-    roleList = StringField(required=True, unique=True)
-    meta = {'db_alias': 'db_user_management'}
-
 class List(Document):
     # listId = ReferenceField(Roles, required = True)
     ToDoList = StringField(max_length=25, required=True, unique=True)

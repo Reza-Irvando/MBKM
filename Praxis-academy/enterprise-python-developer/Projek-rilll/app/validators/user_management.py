@@ -22,14 +22,3 @@ def UpdateList(data):
         return False
     except Exception as err:
         return err
-
-def DeleteList(data):
-    try:
-        checker = Checker({
-            "ToDoList": str,
-            "Deskripsi": str
-        })
-        checker.validate(data)
-        return False
-    except Exception as err:
-        return err
