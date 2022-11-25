@@ -9,4 +9,3 @@ Management-service diagram:
 Transaction-service diagram:
 
 ![transaction](https://github.com/Reza-Irvando/MBKM/blob/main/Praxis-academy/iboost_ERD-transaction.jpg)
-
