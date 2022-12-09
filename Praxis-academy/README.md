@@ -1,6 +1,6 @@
 # Projek Iboost Back-End
 
-Link projek (di dalam folder "Projek Trello New") : https://github.com/Reza-Irvando/Iboost-booster
+Link projek (di dalam folder "Projek Iboost Back-end") : https://github.com/Reza-Irvando/Iboost-booster
 
 Management-service diagram:
 
