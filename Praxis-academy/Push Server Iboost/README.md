@@ -9,3 +9,11 @@
   > Update Payment Status
   
   > Update Bank
+
+  > Update Category
+  
+  > Update BlastStatus
+  
+  > Update Platform
+  
+  > Update Template
