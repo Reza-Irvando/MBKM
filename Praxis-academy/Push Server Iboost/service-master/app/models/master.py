@@ -3,7 +3,7 @@ from mongoengine import *
 from datetime import datetime
 from app import configs
 
-connect(alias='master', db=configs.mongoDbMaser, host=configs.mongoHost, port=configs.mongoPort)
+connect(alias='master', db=configs.mongoDbMaster, host=configs.mongoHost, port=configs.mongoPort)
 connect(alias='management', db=configs.mongoDbManagement, host=configs.mongoHost, port=configs.mongoPort)
 
 class Users(Document):
@@ -47,3 +47,40 @@ class PaymentStatus(Document):
     isDelete = BooleanField(required=True, default=False)
 
     meta = {'db_alias': 'master'}
+
+class Banks(Document):
+    bankName = StringField(required=True, unique=True)
+    bankCode = StringField(required=True, unique=True)
+    createdAt = DateTimeField(required=True, default=datetime.utcnow())
+    updatedAt = DateTimeField(required=True, default=datetime.utcnow())
+    updatedBy = ReferenceField(Users, null=True)
+    createdBy = ReferenceField(Users, null=True)
+    isActive = BooleanField(required=True, default=True)
+    isDelete = BooleanField(required=True, default=False)
+
+    meta = {'db_alias': 'master'}
+
+class Categories(Document):
+    categoryName = StringField(required=True, unique=True)
+    categoryCode = StringField(required=True, unique=True)
+    createdAt = DateTimeField(required=True, default=datetime.utcnow())
+    updatedAt = DateTimeField(required=True, default=datetime.utcnow())
+    updatedBy = ReferenceField(Users, null=True)
+    createdBy = ReferenceField(Users, null=True)
+    isActive = BooleanField(required=True, default=True)
+    isDelete = BooleanField(required=True, default=False)
+
+    meta = {'db_alias': 'master'}
+
+class BlastStatus(Document):
+    blastStatusName = StringField(required=True, unique=True)
+    blastStatusCode = StringField(required=True, unique=True)
+    createdAt = DateTimeField(required=True, default=datetime.utcnow())
+    updatedAt = DateTimeField(required=True, default=datetime.utcnow())
+    updatedBy = ReferenceField(Users, null=True)
+    createdBy = ReferenceField(Users, null=True)
+    isActive = BooleanField(required=True, default=True)
+    isDelete = BooleanField(required=True, default=False)
+
+    meta = {'db_alias': 'master'}
+
